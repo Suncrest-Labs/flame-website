@@ -1,7 +1,13 @@
+import Banner from "./components/Banner";
+import Community from "./components/community";
 import Credibility from "./components/credibility";
+import Demo from "./components/demo";
+import FAQ from "./components/faq";
+import Footer from "./components/footer";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import WhyFlame from "./components/whyflame";
+import Work from "./components/work";
 
 export default function Home() {
   return (
@@ -12,7 +18,13 @@ export default function Home() {
       </div>
 
       <Credibility />
-      <WhyFlame/>
+      <WhyFlame />
+      <Demo />
+      <Work />
+      <Community />
+      <FAQ />
+      <Banner />
+      <Footer/>
     </>
   );
 }

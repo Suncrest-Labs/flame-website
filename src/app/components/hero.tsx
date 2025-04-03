@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
 
 
-            <Image src={star} width={100} height={210} alt="mockups" className="absolute top-3 left-1/4"/>
+            <Image src={star} width={100} height={210} alt="mockups" className="absolute top-3 left-1/4" />
             <Image src={wallet} width={200} height={210} alt="mockups" className="absolute top-3 right-1/4" />
             <Image src={man} width={120} height={210} alt="mockups" className="absolute top-1/3 left-1/5" />
             <Image src={shield} width={200} height={210} alt="mockups" className="absolute top-1/3 right-1/5" />
