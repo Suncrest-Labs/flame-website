@@ -6,7 +6,6 @@ import Logo from '../../../public/Images/Logo.png';
 const Footer = () => {
     return (
         <footer className="bg-[#F6F6F6] rounded-3xl px-28 py-28 mx-[2.5%] border border-[#d3d6e3] my-16">
-            {/* Top Section with Logo, Text, and Newsletter */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
                 {/* Logo and Description */}
                 <div className="flex flex-col mb-6 md:mb-0">
@@ -36,11 +35,8 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-
-            {/* Divider Line */}
             <hr className="my-6" />
 
-            {/* Bottom Section with Links and Copyright */}
             <div className="flex flex-col md:flex-row justify-between items-center">
                 {/* Navigation Links */}
                 <div className="flex gap-8 mb-4 md:mb-0">
