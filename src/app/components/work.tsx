@@ -1,44 +1,68 @@
-const Work = () => {
-    return (
-        <>
-            <div className="flex flex-col items-center">
-                <div className="mt-24 mb-10 opacity-40">
-                    <p className="text-xs border border-gray-400 w-fit rounded-full px-4 py-2 text-center">
-                        MONETIZATION & REWARDS
-                    </p>
-                </div>
-                <p className="text-3xl mb-5">Monetize Your Creativity</p>
-                <p className="tracking-wider opacity-60">
-                    all while maintaining control over their data through zk-SNARKs encryption.
-                </p>
+import React from 'react';
+import Image from 'next/image';
+import work from '../../../public/Images/work.png';
+import workwhite from '../../../public/Images/work-white.png';
+
+const Work: React.FC = () => {
+  const steps = [
+    {
+      title: "Create an Account",
+      description: "Quick sign-up process",
+      imageUrl: work
+    },
+    {
+      title: "Post & Engage",
+      description: "Share content, chat securely, and interact with others.",
+      imageUrl: workwhite
+    },
+    {
+      title: "Earn & Contribute",
+      description: "Complete bounties, monetize content, and build the community.",
+      imageUrl: work
+    },
+    {
+      title: "Get Rewarded",
+      description: "Collect rewards and grow your reputation in the Flame ecosystem.",
+      imageUrl: work
+    }
+  ];
+
+  return (
+    <section className="px-4 h-[60vh] w-full bg-[#F7F8FC] flex flex-col items-center justify-center">
+      <div className="flex justify-center mb-12">
+        <p className="text-xs border border-gray-400 w-fit rounded-full px-4 py-2 text-center">
+          <span className="opacity-60">WHY CHOOSE</span> <span className="bg-gradient-to-r from-[#FF640D] to-[#AB20AB] bg-clip-text text-transparent">FLAME</span><span className="opacity-60">?</span>
+        </p>
+      </div>
+      <div className="w-full">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">How Flame Works</h2>
+          <p className="text-lg text-gray-600">
+            all while maintaining control over their data through zk-SNARKs encryption.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {steps.map((step, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className="relative w-full h-56 mb-6 overflow-hidden rounded-lg bg-purple-50">
+                <Image
+                  src={step.imageUrl}
+                  alt={step.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="transition-transform duration-300 hover:scale-105"
+                  priority={index === 0}
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
+              <p className="text-gray-600 text-center">{step.description}</p>
             </div>
-
-            {/* Bento Grid Layout */}
-            <div className="grid grid-cols-3 gap-6 px-[5%] py-20">
-                {/* First row */}
-                <div
-                    className="col-span-2 h-[700px] bg-cover bg-center rounded-2xl"
-                    style={{ backgroundImage: `url('/Images/tipping.png')` }}
-                ></div>
-
-                <div
-                    className="col-span-1 h-[700px] bg-cover bg-center rounded-2xl"
-                    style={{ backgroundImage: `url('/Images/stake.png')` }}
-                ></div>
-
-                {/* Second row */}
-                <div
-                    className="col-span-1 h-[700px] bg-cover bg-center rounded-2xl"
-                    style={{ backgroundImage: `url('/Images/nft.png')` }}
-                ></div>
-
-                <div
-                    className="col-span-2 h-[700px] bg-cover bg-center rounded-2xl"
-                    style={{ backgroundImage: `url('/Images/aztec.png')` }}
-                ></div>
-            </div>
-        </>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Work;

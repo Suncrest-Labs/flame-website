@@ -24,7 +24,7 @@ const Footer = () => {
                         <input
                             type="email"
                             placeholder="Subscribe to our newsletter..."
-                            className="border border-gray-300 rounded-lg px-4 py-3 w-full md:w-80"
+                            className="border border-gray-300 rounded-lg px-4 py-3 w-full md:w-80 outline-none"
                         />
                         <button className="bg-[#6E3AFF] text-white font-medium px-6 py-3 rounded-lg">
                             Join Now
