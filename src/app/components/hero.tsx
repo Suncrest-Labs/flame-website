@@ -69,8 +69,8 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-center mb-20 relative mt-20">
-                    <Image src={phonemockups} width={1650} height={330} alt="mockups" />
+                <div className="flex items-center justify-center relative pt-[5%]">
+                    <Image src={phonemockups} width={1500} height={330} alt="mockups" />
                     <Image src={modals} width={1200} height={210} alt="mockups" className="absolute" />
                 </div>
             </div>

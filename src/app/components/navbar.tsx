@@ -5,7 +5,7 @@ import Laptop from '../../../public/Images/laptop.svg';
 
 const Navbar = () => {
     return (
-        <nav className='flex justify-between items-center px-16 py-6 bg-white shadow-md rounded-full'>
+        <nav className='flex justify-between items-center px-16 py-3 bg-white shadow-md rounded-full'>
             <div className='flex items-center gap-4'>
                 <div className='flex items-center gap-1 cursor-pointer'>
                     <div className='bg-[#6E3AFF] rounded-xl px-2 py-1'>
