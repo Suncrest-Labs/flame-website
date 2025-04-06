@@ -13,21 +13,21 @@ const Community = () => {
             <p className="text-center text-3xl">Join a Thriving Community</p>
             <p className="opacity-60 tracking-wider text-center mt-4 mb-16">all while maintaining control over their data through zk-SNARKs encryption.</p>
 
-            <div className="flex justify-between gap-8 px-[5%]">
+            <div className="flex flex-col md:flex-row justify-between gap-8 px-[5%]">
                 <div className="bg-[#f1ebff] rounded-3xl px-24 py-8">
                     <Image src={purple} width={650} height={650} alt="participation" className="mb-10" />
-                    <p className="max-w-[35%] mb-4 font-semibold text-3xl text-[#6E3AFF]">Tired Particpation</p>
-                    <p className="text-md max-w-[55%] tracking-wider opacity-60">Earn your place in the Flame community with contributions.</p>
+                    <p className="text-lg w-full md:max-w-[35%] mb-4 font-semibold md:text-3xl text-[#6E3AFF]">Tired Particpation</p>
+                    <p className="text-md w-full md:max-w-[55%] tracking-wider opacity-60">Earn your place in the Flame community with contributions.</p>
                 </div>
                 <div className="bg-[#feefe7] rounded-3xl px-24 py-8">
                     <Image src={orange} width={650} height={650} alt="participation" className="mb-10" />
-                    <p className="max-w-[45%] mb-4 font-semibold text-3xl text-[#F6610D]">Merit-Based Advancements</p>
-                    <p className="text-md max-w-[55%] tracking-wider opacity-60">Level up from lurker to contributor to elite member.</p>
+                    <p className="w-full md:max-w-[45%] mb-4 font-semibold text-lg md:text-3xl text-[#F6610D]">Merit-Based Advancements</p>
+                    <p className="text-md w-full md:max-w-[55%] tracking-wider opacity-60">Level up from lurker to contributor to elite member.</p>
                 </div>
                 <div className="bg-[#ecf8f0] rounded-3xl px-24 py-8">
                     <Image src={green} width={650} height={650} alt="participation" className="mb-10" />
-                    <p className="max-w-[35%] mb-4 font-semibold text-3xl text-[#40B66B]">DAO Governance</p>
-                    <p className="text-md max-w-[55%] tracking-wider opacity-60">Shape the future of Flame through community voting.</p>
+                    <p className="text-lg w-full md:max-w-[35%] mb-4 font-semibold md:text-3xl text-[#40B66B]">DAO Governance</p>
+                    <p className="text-md w-full md:max-w-[55%] tracking-wider opacity-60">Shape the future of Flame through community voting.</p>
                 </div>
             </div>
         </div>

@@ -38,8 +38,8 @@ const FAQ = () => {
   return (
     <div className="flex flex-col md:flex-row gap-8 py-8 px-[5%] mx-auto mb-16">
       <div className="md:w-1/3">
-        <h2 className="text-[3rem] font-bold text-navy-800 mb-4 max-w-[50%]">Frequently Asked Questions</h2>
-        <p className="text-gray-500 max-w-[45%] opacity-60 leading-loose">
+        <h2 className="text-2xl md:text-[3rem] font-bold text-navy-800 mb-4 max-w-[50%]">Frequently Asked Questions</h2>
+        <p className="text-gray-500 text-sm md:text-[16px] w-full md:max-w-[45%] opacity-60 leading-snug md:leading-loose">
           Find quick answers to common queries in our FAQs section, designed to address your most pressing questions and provide you with the information you need.
         </p>
       </div>
@@ -53,10 +53,10 @@ const FAQ = () => {
             onClick={() => toggleAccordion(index)}
           >
             <div className="flex items-center justify-between p-6">
-              <h3 className="text-lg font-medium">{item.question}</h3>
+              <h3 className="text-sm md:text-lg font-medium">{item.question}</h3>
               <div className="relative">
                 <div className={`transition-transform duration-300 ${openIndex === index ? 'rotate-45' : 'rotate-0'}`}>
-                  <Image src={star} width={30} height={30} alt="star icon" />
+                  <Image src={star} width={30} height={30} alt="star icon" className='w-[20px] md:w-[30px]' />
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@ const FAQ = () => {
               className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
             >
               <div className="p-6 pt-0">
-                <p className="text-gray-600">{item.answer}</p>
+                <p className="text-gray-600 text-sm md:text-[16px]">{item.answer}</p>
               </div>
             </div>
           </div>
