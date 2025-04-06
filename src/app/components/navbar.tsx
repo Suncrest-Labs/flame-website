@@ -58,7 +58,7 @@ const Navbar = () => {
                     isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
             >
-                <div className="flex flex-col justify-center h-full px-8 pt-16 border-2">
+                <div className="flex flex-col justify-center h-full px-8 pt-16">
                     <ul className="flex flex-col gap-8 font-semibold text-xl mb-12">
                         <li className="cursor-pointer hover:text-[#6E3AFF] transition-colors">Apps</li>
                         <li className="cursor-pointer hover:text-[#6E3AFF] transition-colors">Features</li>
