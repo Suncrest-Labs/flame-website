@@ -28,7 +28,7 @@ const Work: React.FC = () => {
   ];
 
   return (
-    <section className="px-4 h-[60vh] w-full bg-[#F7F8FC] flex flex-col items-center justify-center">
+    <section className="px-16 py-8 md:py-0 md:px-4 h-full md:h-[60vh] w-full bg-[#F7F8FC] flex flex-col items-center justify-center">
       <div className="flex justify-center mb-12">
         <p className="text-xs border border-gray-400 w-fit rounded-full px-4 py-2 text-center">
           <span className="opacity-60">WHY CHOOSE</span> <span className="bg-gradient-to-r from-[#FF640D] to-[#AB20AB] bg-clip-text text-transparent">FLAME</span><span className="opacity-60">?</span>
@@ -42,7 +42,7 @@ const Work: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-28 w-full md:max-w-[100rem] mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="relative w-full h-56 mb-6 overflow-hidden rounded-lg bg-purple-50">
