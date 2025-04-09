@@ -47,7 +47,7 @@ const WhyFlame = () => {
                             {/* Here */}
 
                             <div className="flex items-center justify-center w-full md:max-w-[60%]">
-                                <div className="relative mx-0 w-[300px] h-[300px] md:w-[900px] md:h-[650px]">
+                                <div className="relative mx-0 md:w-[500px] md:h-[500px] w-[250px] h-[250px]">
                                     {/* Base layer (largest) */}
                                     <Image src={Layer4} width={250} height={250} alt="avatar layer 4"
                                         className="absolute top-0 left-0 w-full h-full animate-spin-slow" />
