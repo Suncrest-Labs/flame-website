@@ -21,9 +21,9 @@ const Navbar = () => {
 
                 {/* Desktop Nav Links */}
                 <ul className="hidden md:flex gap-4 font-semibold">
-                    <li className="cursor-pointer">Apps</li>
-                    <li className="cursor-pointer">Features</li>
-                    <li className="cursor-pointer">Developers</li>
+                    <li className="cursor-pointer">Careers</li>
+                    <li className="cursor-pointer">Blog</li>
+                    <li className="cursor-pointer">Whitepaper</li>
                 </ul>
             </div>
 
