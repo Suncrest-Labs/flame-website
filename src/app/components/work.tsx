@@ -2,23 +2,25 @@ import React from 'react';
 import Image from 'next/image';
 import work from '../../../public/Images/work.png';
 import workwhite from '../../../public/Images/work-white.png';
+import createflame from '../../../public/Images/create-account.webp'
+import post from '../../../public/Images/post.webp'
 
 const Work: React.FC = () => {
   const steps = [
     {
       title: "Create an Account",
       description: "Quick sign-up process",
-      imageUrl: work
+      imageUrl: createflame
     },
     {
       title: "Post & Engage",
       description: "Share content, chat securely, and interact with others.",
-      imageUrl: workwhite
+      imageUrl: post
     },
     {
       title: "Earn & Contribute",
       description: "Complete bounties, monetize content, and build the community.",
-      imageUrl: work
+      imageUrl: workwhite
     },
     {
       title: "Get Rewarded",
