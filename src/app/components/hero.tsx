@@ -77,9 +77,9 @@ const Hero = () => {
 
 
             <Image src={star} width={100} height={210} alt="mockups" className="absolute md:top-3 top-[10%] md:left-1/4 w-[40px] md:w-[100px]" />
-            <Image src={wallet} width={200} height={210} alt="mockups" className="absolute md:top-3 bottom-[25%] md:right-1/4 md:w-[200px] w-[80px]" />
-            <Image src={man} width={120} height={210} alt="mockups" className="absolute md:top-1/3 md:left-1/5 top-[10%] right-[20px] w-[45px] md:w-[120px]" />
-            <Image src={shield} width={200} height={210} alt="mockups" className="absolute md:top-1/3 md:right-1/5 bottom-[25%] right-[1%] w-[70px] md:w-[200px]" />
+            <Image src={wallet} width={200} height={210} alt="mockups" className="absolute md:top-3 bottom-[25%] md:right-1/4 md:w-[200px] w-[80px] animate-bounce animation-delay-300" />
+            <Image src={man} width={120} height={210} alt="mockups" className="absolute md:top-1/3 md:right-1/5 bottom-[25%] right-[1%] w-[45px] md:w-[120px]" />
+            <Image src={shield} width={200} height={210} alt="mockups" className="absolute md:top-1/3 md:left-1/5 top-[10%] right-[20px] w-[70px] md:w-[200px] animate-bounce animation-delay-700" />
         </div>
     );
 }

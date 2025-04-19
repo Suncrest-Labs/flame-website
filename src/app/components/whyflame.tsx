@@ -1,13 +1,88 @@
+"use client";
 import Image from "next/image";
-import box from '../../../public/Images/box.png'
+// import box from '../../../public/Images/box.png'
 import privacy from '../../../public/Images/privacy.png'
-import monetization from '../../../public/Images/monetization.png'
 import Layer1 from '../../../public/Images/Layer1.png'
 import Layer2 from '../../../public/Images/Layer2.png'
 import Layer3 from '../../../public/Images/Layer3.png'
 import Layer4 from '../../../public/Images/Layer4.png'
+import collectable1 from '../../../public/Images/Collectible1.png'
+import collectable2 from '../../../public/Images/Collectible2.png'
+import collectable3 from '../../../public/Images/Collectible3.png'
+import collectable4 from '../../../public/Images/Collectible4.png'
+import collectable5 from '../../../public/Images/Collectible5.png'
+import collectable6 from '../../../public/Images/Collectible6.png'
+import collectable7 from '../../../public/Images/Collectible7.png'
+import collectable8 from '../../../public/Images/Collectible8.png'
+import azteclogo from '../../../public/Images/aztech_logo.png'
+import game from '../../../public/Images/game.png'
+import { useEffect, useRef } from 'react';
 
 const WhyFlame = () => {
+    // Array of creator images for the carousel
+    const creatorImages = [
+        { id: 1, src: collectable1, alt: "Creator NFT 1" },
+        { id: 2, src: collectable2, alt: "Creator NFT 2" },
+        { id: 3, src: collectable3, alt: "Creator NFT 3" },
+        { id: 4, src: collectable4, alt: "Creator NFT 4" },
+        { id: 5, src: collectable5, alt: "Creator NFT 5" },
+        { id: 6, src: collectable6, alt: "Creator NFT 6" },
+        { id: 7, src: collectable7, alt: "Creator NFT 7" },
+        { id: 8, src: collectable8, alt: "Creator NFT 8" },
+    ];
+    
+    // Define typed ref to avoid TypeScript errors
+    const carouselRef = useRef<HTMLDivElement>(null);
+    
+    useEffect(() => {
+        const carousel = carouselRef.current;
+        if (!carousel) return;
+        
+        // Calculate total content width for duplicating
+        const contentWidth = carousel.scrollWidth;
+        
+        // Clone the initial carousel items to create a seamless loop
+        const items = carousel.querySelectorAll('.carousel-item');
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            carousel.appendChild(clone);
+        });
+        
+        // Setup animation variables
+        let animationId: number;
+        let position = 0;
+        const speed = 0.5; // Adjust speed as needed
+        
+        // Animation function
+        const animate = () => {
+            if (!carousel) return;
+            
+            position += speed;
+            
+            // Reset position when we've scrolled through the first set of images
+            if (position >= contentWidth) {
+                // Jump back to start without animation
+                position = 0;
+                carousel.scrollLeft = position;
+            } else {
+                // Smooth scroll
+                carousel.scrollLeft = position;
+            }
+            
+            animationId = window.requestAnimationFrame(animate);
+        };
+        
+        // Start the animation
+        animationId = window.requestAnimationFrame(animate);
+        
+        // Cleanup function
+        return () => {
+            if (animationId) {
+                window.cancelAnimationFrame(animationId);
+            }
+        };
+    }, []);
+
     return (
         <>
             <div className="flex flex-col items-center justify-center text-center py-10">
@@ -29,7 +104,34 @@ const WhyFlame = () => {
                 </div>
 
                 <div className="flex flex-col items-center gap-4 bg-[#f1ebff] py-6 px-20 rounded-lg shadow-md">
-                    <Image src={monetization} width={462} height={250} alt="box" />
+                    {/* Carousel container with fade effect */}
+                    <div className="relative w-full overflow-hidden">
+                        {/* Left fade gradient */}
+                        <div className="absolute left-0 top-0 h-full w-12 md:w-[15rem] bg-gradient-to-r from-[#f1ebff] to-transparent z-10"></div>
+                        
+                        {/* Scrolling image container */}
+                        <div 
+                            ref={carouselRef}
+                            className="flex overflow-x-hidden w-full py-4"
+                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                        >
+                            {creatorImages.map((image) => (
+                                <div key={image.id} className="flex-shrink-0 mx-2 w-32 carousel-item">
+                                    <Image 
+                                        src={image.src} 
+                                        width={128} 
+                                        height={160} 
+                                        alt={image.alt}
+                                        className="rounded-lg"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        
+                        {/* Right fade gradient */}
+                        <div className="absolute right-0 top-0 h-full w-12 lg:w-[15rem] bg-gradient-to-l from-[#f1ebff] to-transparent z-10"></div>
+                    </div>
+                    
                     <p className="text-lg md:text-3xl font-bold text-[#6e3aff]">Creator Monetization</p>
                     <p className="opacity-60 p-0 md:px-[30%] font-semibold text-center">Earn via subscriptions, NFTs, DeFi staking, and more!</p>
                 </div>
@@ -65,18 +167,18 @@ const WhyFlame = () => {
                                         className="absolute top-1/2 left-1/2 animate-anti-spin-slow transform -translate-x-1/2 -translate-y-1/2 w-1/3 h-1/3" />
 
                                     {/* Center dollar sign icon */}
-                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-7 h-7 md:w-12 md:h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                                        <span className="text-white text-xl font-bold">$</span>
+                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-7 h-7 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center">
+                                        <span className="text-white text-xl font-bold"><Image src={azteclogo} width={30} height={20} alt="aztec"/></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-4 bg-[#ecf8f0] py-6 px-20 rounded-lg shadow-md text-center">
-                        <Image src={box} width={250} height={250} alt="box" className="mx-auto" />
+                    <div className="flex flex-col gap-4 bg-[#ecf8f0] py-6 px-20 rounded-lg shadow-md text-center justify-center">
+                        <Image src={game} width={350} height={250} alt="box" className="mx-auto" />
                         <p className="text-lg md:text-3xl font-bold mb-3 text-[#40b66b]">Gamified Engagement</p>
-                        <p className="opacity-60 font-semibold">Earn rewards through XP, loot boxes, streaks, and leaderboard rankings.</p>
+                        <p className="opacity-60 font-semibold px-[5rem]">Earn rewards through XP, loot boxes, streaks, and leaderboard rankings.</p>
                     </div>
                 </div>
             </div>

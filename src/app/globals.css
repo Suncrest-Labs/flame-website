@@ -50,9 +50,32 @@
   /* Fixed: Changed 'spin' to 'anti-spin' */
 }
 
-/* body {
- margin-top: 2%;
- margin-bottom: 2%;
- margin-left: 5%;
- margin-right: 5%;
-} */
+/* Add this to your global CSS */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
