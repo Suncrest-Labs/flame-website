@@ -40,9 +40,9 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-between items-center">
                 {/* Navigation Links */}
                 <div className="flex gap-8 mb-4 md:mb-0">
-                    <Link href="/app" className="text-gray-800 hover:text-[#6E3AFF]">App</Link>
-                    <Link href="/features" className="text-gray-800 hover:text-[#6E3AFF]">Features</Link>
-                    <Link href="/developers" className="text-gray-800 hover:text-[#6E3AFF]">Developers</Link>
+                    <Link href="" className="text-gray-800 hover:text-[#6E3AFF]">App</Link>
+                    <Link href="" className="text-gray-800 hover:text-[#6E3AFF]">Docs</Link>
+                    <Link href="" className="text-gray-800 hover:text-[#6E3AFF]">Developers</Link>
                 </div>
 
                 {/* Copyright */}

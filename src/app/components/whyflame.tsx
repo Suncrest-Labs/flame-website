@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-// import box from '../../../public/Images/box.png'
 import privacy from '../../../public/Images/privacy.png'
 import Layer1 from '../../../public/Images/Layer1.png'
 import Layer2 from '../../../public/Images/Layer2.png'
@@ -16,7 +15,7 @@ import collectable7 from '../../../public/Images/Collectible7.png'
 import collectable8 from '../../../public/Images/Collectible8.png'
 import azteclogo from '../../../public/Images/aztech_logo.png'
 import game from '../../../public/Images/game.png'
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const WhyFlame = () => {
     // Array of creator images for the carousel
@@ -33,6 +32,8 @@ const WhyFlame = () => {
     
     // Define typed ref to avoid TypeScript errors
     const carouselRef = useRef<HTMLDivElement>(null);
+    const [isHovered, setIsHovered] = useState(false);
+    const positionRef = useRef(0);
     
     useEffect(() => {
         const carousel = carouselRef.current;
@@ -50,23 +51,23 @@ const WhyFlame = () => {
         
         // Setup animation variables
         let animationId: number;
-        let position = 0;
         const speed = 0.5; // Adjust speed as needed
         
         // Animation function
         const animate = () => {
             if (!carousel) return;
             
-            position += speed;
-            
-            // Reset position when we've scrolled through the first set of images
-            if (position >= contentWidth) {
-                // Jump back to start without animation
-                position = 0;
-                carousel.scrollLeft = position;
-            } else {
-                // Smooth scroll
-                carousel.scrollLeft = position;
+            if (!isHovered) {
+                positionRef.current += speed;
+                
+                // Reset position when we've scrolled through the first set of images
+                if (positionRef.current >= contentWidth) {
+                    // Jump back to start without animation
+                    positionRef.current = 0;
+                }
+                
+                // Update scroll position
+                carousel.scrollLeft = positionRef.current;
             }
             
             animationId = window.requestAnimationFrame(animate);
@@ -81,7 +82,7 @@ const WhyFlame = () => {
                 window.cancelAnimationFrame(animationId);
             }
         };
-    }, []);
+    }, [isHovered]);
 
     return (
         <>
@@ -112,8 +113,10 @@ const WhyFlame = () => {
                         {/* Scrolling image container */}
                         <div 
                             ref={carouselRef}
-                            className="flex overflow-x-hidden w-full py-4"
+                            className="flex overflow-x-hidden w-full py-4 cursor-pointer"
                             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
                         >
                             {creatorImages.map((image) => (
                                 <div key={image.id} className="flex-shrink-0 mx-2 w-32 carousel-item">
@@ -122,7 +125,7 @@ const WhyFlame = () => {
                                         width={128} 
                                         height={160} 
                                         alt={image.alt}
-                                        className="rounded-lg"
+                                        className="rounded-lg transition-transform duration-300 hover:scale-110"
                                     />
                                 </div>
                             ))}
