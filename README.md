@@ -1,39 +1,38 @@
-# 🔥 Flame — A Decentralized SocialFi App on Aztec
+# ![flame-con](https://github.com/user-attachments/assets/29d5b537-7264-4493-8422-e38ebf2b9854) Flame Website — The Gateway to Decentralized SocialFi
 
-**Flame** is a privacy-first, gamified **SocialFi platform** built on the **Aztec Network**, where creators, communities, and contributors converge. Designed for the next era of private, engaging, and rewarding Web3 social interaction, Flame lets users connect, create, and earn, all while keeping their data secure through Aztec’s zero-knowledge infrastructure.
-
----
-
-## 🌍 What We're Building
-
-Flame merges **encrypted social networking**, **creator monetization**, **community incentives**, and **on-chain privacy** to create a seamless, immersive SocialFi experience.
-
-### 🧱 Key Features
-- **Privacy-Preserving Social Layer**  
-  Stories, posts, encrypted chats, video calls — all zk-encrypted and fully private.
-  
-- **AI-Powered Content Tools**  
-  Filters, smart background removal, cartoon avatars, and more.
-
-- **Creator Monetization**  
-  Tips, subscriptions, NFT sales, and pay-to-view content — all with zk payments.
-
-- **Gamified Engagement**  
-  XP levels, Flame Points, loot boxes, leaderboards, and social quests.
-
-- **On-Chain Contribution Economy**  
-  Earn by building tools, completing bounties, organizing events, or helping grow Aztec adoption.
-
-- **DAO Governance & Treasury Rewards**  
-  Influence platform decisions, stake to earn, and access community treasury tools.
+Flame Website** is the official landing page and web portal for **Flame**, a privacy-first, gamified **SocialFi platform** built on the **Aztec Network**. This repository contains the marketing website, documentation, and user onboarding experience that introduces users to the world of private, rewarding Web3 social interaction.
 
 ---
 
-## 🧑‍💻 Open Source Contributions
+## 🌐 What This Repository Contains
 
-We ❤️ contributors. Whether you’re a Solidity dev, zk enthusiast, frontend wizard, or designer — Flame is open to anyone passionate about decentralized social networks and privacy.
+The Flame Website serves as the primary entry point for users discovering Flame, providing information about our platform, features, and community.
 
-> **🔥 NOTE:** Before applying for any issue in this repo, you **must join our Telegram group**.  
+### 🎯 Key Sections
+
+- **Landing Page**  
+  Compelling introduction to Flame's vision and core features
+
+- **Product Showcase**  
+  Interactive demos and feature explanations for our SocialFi platform
+
+- **Documentation Hub**  
+  User guides, API docs, and developer resources
+
+- **Community Portal**  
+  Links to join our community, contribute, and stay updated
+
+- **Getting Started Flows**  
+  Onboarding experiences for new users and developers
+
+---
+
+## 🧑‍💻 Contributing to the Website
+
+We welcome contributions to improve our website experience! Whether you're a frontend developer, UX designer, technical writer, or Web3 enthusiast.
+
+>
+ NOTE:** Before applying for any issue in this repo, you **must join our Telegram group**.  
 > Your **Telegram username must be included** in your issue application.  
 > **Applications without this will not be considered.**
 
@@ -45,9 +44,9 @@ We ❤️ contributors. Whether you’re a Solidity dev, zk enthusiast, frontend
 Browse open issues tagged with:
 - `good first issue`
 - `frontend`
-- `backend`
-- `noir`
-- `Go`
+- `design`
+- `documentation`
+- `content`
 
 ### 2. ✍️ Apply to Work on It
 Before you start, **leave a comment** on the issue stating:
@@ -67,13 +66,16 @@ Once approved:
 - Submit a PR referencing the issue (`Fixes #XX`)
 
 ### 5. 📦 Get Reviewed & Merged
-We’ll review your PR, give feedback if needed, and merge once it’s ready.
+We'll review your PR, give feedback if needed, and merge once it's ready.
+
+---
 
 ## 🤝 Join the Flame Community
 
 Join our community to:
 - Collaborate with other contributors
-- Get updates on new issues
+- Get updates on new features
+- Shape the future of Flame
 
 🔗 **Telegram (Required)**: [t.me/FlameApp](https://t.me/+Nu-Ub_E5Nx5iZDk0)  
 🐦 Twitter: [Coming Soon]  
@@ -83,33 +85,54 @@ Join our community to:
 
 ## 🧠 Tech Stack
 
-- **Blockchain**: Aztec Network (zk-rollup on Ethereum)
-- **Contracts**: Noir
-- **Frontend**: Next.js + Tailwind
-- **Backend**: Go
-- **Privacy Layer**: zk-SNARKs + Noir
-- **Storage**: IPFS / Arweave
-- **AI Tools**: OpenAI + custom AI filters
-- **Gamification**: Custom XP, Flame Points, and lootbox systems
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Content**: [To be determined]
+- **Deployment**: Vercel[Still working on deployment]
+- **Analytics**: [To be determined]
 
 ---
 
 ## 🧑‍🚀 Contributor Roles Needed
 
-- ZK/Noir Developers
-- Go Engineers
-- Frontend Engineers (Next.js + Web3)
+- Frontend Developers (Next.js/React)
+- UI/UX Designers
 - Technical Writers
+- Content Creators(Non technical & technical capacities)
+- Web3 UX Specialists
 
 ---
 
-## 🌟 Flame's Vision
+## 🚀 Getting Started
 
-We're building the **Web3 hub for social interaction**, where every like, post, story, or contribution means more than attention—it means ownership, reward, and privacy. Flame is where zk meets socialfi, and where community meets privacy.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/flame-org/flame-website.git
+   cd flame-website
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   Visit `http://localhost:3000` to see the website
 
 ---
 
-## 🚀 Ready to Light It Up?
+## 🌟 Our Mission
 
-Browse our issues,  join the Telegram, and get started on shaping the future of private social interaction on Web3. Let's build Flame together. 🔥
+We're building the **gateway to Web3 social interaction**, where users discover how privacy, community, and rewards come together. The Flame Website is the first impression users have of our vision—making it crucial that we deliver an exceptional, educational, and inspiring experience.
 
+---
+
+## 🔥 Ready to Build the Future?
+
+Browse our issues, join the Telegram, and help us create the most compelling introduction to decentralized social networking. Let's welcome the world to Flame together. 🔥
